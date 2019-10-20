@@ -2,7 +2,7 @@ REPORT zr_view_maintenance_no_dialog.
 
 """
 * This program is a little example of use VIEW_MAINTENANCE_NO_DIALOG.
-* It add new line(s) in view without dialog (in my case in background mode).
+* It adds new line(s) in view without dialog (in my case in background mode).
 """
 
 SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE text-001.
