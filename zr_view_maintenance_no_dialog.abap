@@ -22,7 +22,7 @@ SELECTION-SCREEN END OF BLOCK b2.
 
 SELECTION-SCREEN BEGIN OF BLOCK b3 WITH FRAME TITLE text-003.
   PARAMETERS:
-*        CHAINNO      type  CHAINNO,
+*    CHAINNO  type CHAINNO,
     chnbankt TYPE chainbankt DEFAULT '3',
     chnbanks TYPE chainbanks DEFAULT 'US',
     chnbankk TYPE chainbankk DEFAULT '444444444',
