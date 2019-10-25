@@ -363,3 +363,37 @@ CLASS zcl_ftp_client IMPLEMENTATION.
   ENDMETHOD.
 
 ENDCLASS.
+
+
+*======================
+
+CLASS zcx_ftp_client DEFINITION
+  PUBLIC
+  INHERITING FROM cx_static_check
+  CREATE PUBLIC.
+
+  PUBLIC SECTION.
+
+    CONSTANTS program_error TYPE sotr_conc VALUE 'B62A30A31A021EE9BCF9F472D219896E' ##NO_TEXT.
+    DATA desc_error TYPE string.
+
+    METHODS constructor
+      IMPORTING
+        !textid     LIKE textid OPTIONAL
+        !previous   LIKE previous OPTIONAL
+        !desc_error TYPE string OPTIONAL.
+  PROTECTED SECTION.
+  PRIVATE SECTION.
+ENDCLASS.
+
+
+CLASS zcx_ftp_client IMPLEMENTATION.
+
+  METHOD constructor.
+    CALL METHOD super->constructor
+      EXPORTING
+        textid   = textid
+        previous = previous.
+    me->desc_error = desc_error.
+  ENDMETHOD.
+ENDCLASS.
